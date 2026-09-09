@@ -2,6 +2,13 @@
 report and explanation how supercomputer of Brigham Young University can be used by Mosenkov research group and how to use it in details.
 
 
-## Training and Creating account
+### Training and Creating account
 BYU faculty and students may request an account. Students and non-CFS-track faculty are required to have a sponsor who is CFS-track faculty. Account requests are typically approved within 2-3 business days.
 [Request an Account](https://rc.byu.edu/account/create/)
+
+
+Before gaining access you will need the following:
+- A secure shell client: SSH (various versions are available for free).
+- A basic knowledge of Linux (e.g. how to login, edit files, use ssh and scp, etc).
+- A legitimate need for Office of Research Computing resources.
+- CFS-track faculty may create an account without a sponsor. All others must be sponsored by a faculty member who has an account.
