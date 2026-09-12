@@ -27,4 +27,14 @@ It's not a separate piece of software you download — it ships with OpenSSH, wh
 ```
 sudo apt update
 sudo apt install openssh-client
-```  
+```
+2. Generate a key pair, if you don't have one:
+```
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+Press Enter at the file-location prompt to accept the default, and set a passphrase.
+3. Start the agent for your terminal session:
+```
+eval "$(ssh-agent -s)"
+```
+This starts the agent process and sets environment variables so ssh knows how to talk to it. You'll see it print something like Agent pid 12345.
