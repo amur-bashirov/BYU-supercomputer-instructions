@@ -20,3 +20,11 @@ Think of your private key like a house key protected by a passphrase-locked safe
 3. Hands it out automatically to `ssh` whenever you connect somewhere, for as long as the agent is running (usually until you log out or reboot).
 
 It's not a separate piece of software you download — it ships with OpenSSH, which you already installed. You just have to start it, because it doesn't run by default in most terminal sessions.
+
+## How to install and use it (teachable steps)
+### For Linux Ubuntu
+1. Confirm OpenSSH client is installed (includes s`sh-agent`):
+```
+sudo apt update
+sudo apt install openssh-client
+```  
