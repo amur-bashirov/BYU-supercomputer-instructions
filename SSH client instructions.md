@@ -38,4 +38,19 @@ It's not a separate piece of software you download — it ships with OpenSSH, wh
   ```
   eval "$(ssh-agent -s)"
   ```
-  This starts the agent process and sets environment variables so ssh knows how to talk to it. You'll see it print something like Agent pid 12345.
+  This starts the agent process and sets environment variables so `ssh` knows how to talk to it. You'll see it print something like Agent `pid 12345`.
+
+  4. Add your private key to the running agent:
+  ```
+  ssh-add ~/.ssh/id_ed25519
+  ```
+  This is the one moment you type your passphrase. The agent now holds the unlocked key.
+
+  5. Confirm it's loaded:
+     ```
+     ssh-add -l
+     ```
+  Lists the fingerprints of keys currently held by the agent.
+  
+  Note on persistance: 
+  > on most desktop Ubuntu setups, GNOME Keyring auto-starts an agent at login and can auto-unlock it when you log into your desktop, so you may not need step 3–4 manually every session. But knowing how to do it by hand (like above) is what matters for anyone using a minimal/server install with no desktop environment.
